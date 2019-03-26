@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+nickzxing.starter.web.config.FeignConfiguration,\
+nickzxing.starter.web.config.HystrixConfiguration,\
+nickzxing.starter.web.config.SpringConfiguration
