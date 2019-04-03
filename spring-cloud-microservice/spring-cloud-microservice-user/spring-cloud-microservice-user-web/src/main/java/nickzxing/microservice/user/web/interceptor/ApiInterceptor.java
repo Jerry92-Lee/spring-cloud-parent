@@ -1,4 +1,4 @@
-package nickzxing.microservice.order.web.interceptor;
+package nickzxing.microservice.user.web.interceptor;
 
 import nickzxing.dependency.common.util.ApiUtils;
 import org.springframework.beans.factory.annotation.Value;
@@ -21,5 +21,4 @@ public class ApiInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         return ApiUtils.ApiValidation(request, response, hostList);
     }
-
 }
