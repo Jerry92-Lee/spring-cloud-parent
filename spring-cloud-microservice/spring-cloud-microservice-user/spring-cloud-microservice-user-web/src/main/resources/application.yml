@@ -92,7 +92,7 @@ ribbon:
   ConnectTimeout: 1000
 #  请求处理超时时间
   ReadTimeout: 3000
-#  对当前服务实例重试次数，需要引入spring-retry依赖
+#  对当前服务实例重试次数
   MaxAutoRetries: 1
 #  切换服务实例重试次数
   MaxAutoRetriesNextServer: 3

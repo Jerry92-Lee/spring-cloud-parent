@@ -1,10 +1,8 @@
 package nickzxing.microservice.user.api.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
+import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 
 /**
@@ -16,9 +14,13 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
+@Builder
 public class UserDTO implements Serializable {
 
     private static final long serialVersionUID = 5843226531811925814L;
+
     private Long id;
+
+    @NotBlank(message = "{user.username.notBlank}")
     private String username;
 }

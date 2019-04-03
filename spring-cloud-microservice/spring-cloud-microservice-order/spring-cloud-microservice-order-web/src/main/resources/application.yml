@@ -1,7 +1,7 @@
 #########################################################################################################################
 ############################################# Spring Configuration Begin ################################################
 server:
-  port: 1002
+  port: 1001
 spring:
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
@@ -92,7 +92,7 @@ ribbon:
   ConnectTimeout: 1000
 #  请求处理超时时间
   ReadTimeout: 3000
-#  对当前服务实例重试次数，需要引入spring-retry依赖
+#  对当前服务实例重试次数
   MaxAutoRetries: 1
 #  切换服务实例重试次数
   MaxAutoRetriesNextServer: 3
@@ -120,6 +120,9 @@ feign:
   hystrix:
 #    开启对熔断的支持
     enabled: true
+logging:
+  level:
+    nickzxing.microservice.order.web.feign.client: DEBUG
 ############################################# Feign Configuration End ###################################################
 #########################################################################################################################
 

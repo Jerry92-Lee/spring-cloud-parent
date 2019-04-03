@@ -65,6 +65,10 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>com.ctrip.framework.apollo</groupId>
+            <artifactId>apollo-client</artifactId>
+        </dependency>
+        <dependency>
             <groupId>nickzxing.spring.cloud</groupId>
             <artifactId>spring-cloud-dependency-common</artifactId>
             <version>${project.version}</version>

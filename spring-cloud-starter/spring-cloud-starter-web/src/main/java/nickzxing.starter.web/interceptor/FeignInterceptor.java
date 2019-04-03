@@ -14,10 +14,11 @@ import java.util.Enumeration;
  * Feign拦截器，用于传递请求参数
  * 需要加载Hystrix自定义隔离策略，否则ServletRequestAttributes为NULL，详见FeignHystrixConcurrencyStrategy.java
  */
-public class HeaderInterceptor implements RequestInterceptor {
+public class FeignInterceptor implements RequestInterceptor {
 
     @Override
     public void apply(RequestTemplate requestTemplate) {
+        System.out.println("apply被调用");
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
         Enumeration<String> headerNames = request.getHeaderNames();
