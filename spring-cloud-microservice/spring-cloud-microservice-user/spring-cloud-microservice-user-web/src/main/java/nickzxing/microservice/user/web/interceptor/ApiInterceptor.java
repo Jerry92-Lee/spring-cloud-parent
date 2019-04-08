@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class ApiInterceptor implements HandlerInterceptor {
 
-    @Value("${host.list}")
+    @Value("${host.list:}")
     String[] hostList;
 
     @Override

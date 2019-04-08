@@ -19,12 +19,8 @@ public class UserController implements UserServiceAPI {
     @Autowired
     UserService userService;
 
-    @Value("${config.service.url}")
-    String url;
-
     @RequestMapping(value = "/get", method = RequestMethod.GET)
     public UserDTO get(@RequestParam(name = "id") Long id) {
-        System.out.println(url);
         return CopyUtils.copyBean(userService.get(id), UserDTO.class);
     }
 

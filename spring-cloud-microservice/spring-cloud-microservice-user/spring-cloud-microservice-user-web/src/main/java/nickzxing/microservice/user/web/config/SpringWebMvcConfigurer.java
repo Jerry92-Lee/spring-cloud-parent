@@ -36,10 +36,10 @@ public class SpringWebMvcConfigurer implements WebMvcConfigurer {
         return new ApiInterceptor();
     }
 
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(apiInterceptor())
-                .addPathPatterns(includePathPatternsList)
-                .excludePathPatterns(excludePathPatternsList);
-    }
+//    @Override
+//    public void addInterceptors(InterceptorRegistry registry) {
+//        registry.addInterceptor(apiInterceptor())
+//                .addPathPatterns(includePathPatternsList)
+//                .excludePathPatterns(excludePathPatternsList);
+//    }
 }

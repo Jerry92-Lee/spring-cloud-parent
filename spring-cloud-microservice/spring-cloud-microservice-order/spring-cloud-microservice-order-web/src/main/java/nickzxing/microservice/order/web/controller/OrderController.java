@@ -26,12 +26,8 @@ public class OrderController implements OrderOpenAPI {
     @Autowired
     UserFeignClient userFeignClient;
 
-    @Value("${host.list}")
-    String[] ll;
-
     @Override
     public List<OrderDTO> getByUserId(Long userId) {
-        System.out.println(ll);
         UserDTO userDTO1 = userFeignClient.get(userId);
 //        UserDTO userDTO2 = userFeignClient.getPath(userId);
 //        UserDTO userDTO3 = userFeignClient.postBody(UserDTO.builder().id(userId).build());

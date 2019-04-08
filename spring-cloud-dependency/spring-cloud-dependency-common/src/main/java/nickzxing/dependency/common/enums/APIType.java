@@ -6,5 +6,8 @@ package nickzxing.dependency.common.enums;
  */
 public enum APIType {
 
+    /**
+     * 后续根据需求区分SERVICE_OUTER与SERVICE_INNER
+     */
     FRONTAPI, OPENAPI, SERVICEAPI
 }

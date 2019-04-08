@@ -18,7 +18,6 @@ public class FeignInterceptor implements RequestInterceptor {
 
     @Override
     public void apply(RequestTemplate requestTemplate) {
-        System.out.println("apply被调用");
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
         Enumeration<String> headerNames = request.getHeaderNames();
